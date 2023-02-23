@@ -48,31 +48,24 @@ total_warehousing = float(df1['Warehousing'].sum())
 total1,total2,total3,total4,total5,total6,total7 = st.columns(7,gap='large')
 
 with total1:
-    st.image('box.png',use_column_width='Always')
     st.metric(label='Total Volume', value= numerize(total_volume))
     
 with total2:
-    st.image('sales (1).png',use_column_width='Always')
     st.metric(label='Total Gross Sales', value=numerize(total_gross_sales))
 
 with total3:
-    st.image('discount.png',use_column_width='Always')
     st.metric(label= 'Total Discount',value=numerize(total_discount,2))
 
 with total4:
-    st.image('sales.png',use_column_width='Always')
     st.metric(label='Total Net Sales',value=numerize(total_net_sales))
 
 with total5:
-    st.image('shopping-cart.png',use_column_width='Always')
     st.metric(label='Total Cost of Goods Sold',value=numerize(total_cost_of_goods_sold))
     
 with total6:
-    st.image('product.png',use_column_width='Always')
     st.metric(label='Distributions',value=numerize(total_distribution))
 
 with total7:
-    st.image('acquisition.png',use_column_width='Always')
     st.metric(label='Warehousing',value=numerize(total_warehousing))
 
 Q1,Q2 = st.columns(2)
