@@ -88,9 +88,9 @@ with Q2:
                                     y=['Gross Profit'],
                                     title='<b>Overall Profit by Sector</b>')
     fig_impressions_per_day.update_xaxes(rangeslider_visible=False),
-                                        showlegend = False,
+                                        showlegend = True,
                                         title = {'x' : 0.5},
-                                         plot_bgcolor = "rgba(0,0,0,0)",
+                                        plot_bgcolor = "rgba(0,0,0,0)",
                                         xaxis =(dict(showgrid = False)),
                                         yaxis =(dict(showgrid = False)),)
     st.plotly_chart(fig_impressions_per_day,use_container_width=True)
