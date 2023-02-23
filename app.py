@@ -92,8 +92,8 @@ with Q2:
 Q3,Q4 = st.columns(2)
 
 with Q3:
-    df4 = df1.groupby(by='Year').sum()[['Volume']].reset_index()
-    fig_diff_client_type = px.pie(df4,names='Year',values='Volume',title='<b>Client Volume Stats</b>')
+    df4 = df1.groupby(by='Client Type').sum()[['Volume']].reset_index()
+    fig_diff_client_type = px.pie(df4,names='Client Type',values='Volume',title='<b>Client Volume Stats</b>')
     fig_diff_client_type.update_layout(title = {'x':0.5}, plot_bgcolor = "rgba(0,0,0,0)")
     st.plotly_chart(fig_diff_client_type,use_container_width=True)
 
