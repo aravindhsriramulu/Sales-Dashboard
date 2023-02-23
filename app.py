@@ -84,7 +84,7 @@ with Q1:
     st.plotly_chart(fig_profit_by_volume,use_container_width=True)
 
 with Q2:
-    fig_sales_per_day = px.line(df1,x='date',
+    fig_sales_per_day = px.line(df1,x='Month',
                                     y=['Net Sales'],
                                     color='Discounts',
                                     title='<b>Sales figure for the past two years</b>')
