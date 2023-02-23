@@ -45,7 +45,7 @@ total_distribution = float(df1['Distribution'].sum())
 total_warehousing = float(df1['Warehousing'].sum())
 
 
-total1,total2,total3,total4,total5,total6,total7 = st.columns(5,gap='large')
+total1,total2,total3,total4,total5,total6,total7 = st.columns(7,gap='large')
 
 with total1:
     st.image('box.png',use_column_width='Auto')
