@@ -15,7 +15,7 @@ def get_data():
 
 df = get_data()
 
-header_left,header_mid,header_right = st.columns([1,2,1],gap='large')
+header_left,header_mid,header_right = st.columns([1,2],gap='large')
 
 with header_mid:
     st.title('Sales Dashboard')
