@@ -9,7 +9,7 @@ st.set_page_config(page_title = 'Sales Dashboard',
 
 @st.cache
 def get_data():
-    df = pd.read_csv('data/erpdata.csv')
+    df = pd.read_csv('erpdata.xlsx')
     df['date']= pd.to_datetime(df['Period'])
     return df
 
