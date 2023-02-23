@@ -84,15 +84,18 @@ with Q1:
     st.plotly_chart(fig_profit_by_volume,use_container_width=True)
 
 with Q2:
-  def get_table():
+    df2 = df1.groupby(by = ['Client Type']).sum()[['Gross Profit','Fully Delivered Margin']].reset_index()
     df1['Gross Profit'] =round(df1['Net Sales'] + df1['Cost of Goods Sold'],3)
-    df1['Fully Delivered Margin'] = round(df1['Net Sales'] + df1['Cost of Goods Sold'] + df1['Distribution'] + df1['Warehousing'],2)
-    datatable = df[['Material Description', 'Fully Delivered Margin','Gross Profit']].sort_values(by=['Gross Profit'], ascending=False)
-    return datatable
-
-    datatable = get_table()
-    st.markdown("Material-wise profit and margin contribution")
-    st.table(datatable)# will display the table
+    df1['Fully Delivered Margin'] = round(df2['Net Sales'] + df1['Cost of Goods Sold'] + df1['Distribution'] + df1['Warehousing'],2)
+    fig_profit_by_volume = px.bar(df2,
+                            x='Client Type',
+                            y='Fully Delivered Margin',
+                            title='<b>How each client has contributed margin</b>')
+    fig_profit_by_volume.update_layout(title = {'x' : 0.5},
+                                    plot_bgcolor = "rgba(0,0,0,0)",
+                                    xaxis =(dict(showgrid = False)),
+                                    yaxis =(dict(showgrid = False)))
+    st.plotly_chart(fig_profit_by_volume,use_container_width=True)
   
 Q3,Q4 = st.columns(2)
 
