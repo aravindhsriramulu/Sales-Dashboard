@@ -26,9 +26,9 @@ with st.sidebar:
                                 options=df['Client'].unique(),
                                 default=df['Client'].unique())
     
-    Month_filter = st.multiselect(label='Select the Month',
-                            options=df['Month'].unique(),
-                            default=df['Month'].unique())
+    Month_filter = st.multiselect(label='Select the Year',
+                            options=df['Year'].unique(),
+                            default=df['Year'].unique())
 
     Brand_filter = st.multiselect(label='Select the Brand',
                             options=df['Brand'].unique(),
@@ -84,7 +84,7 @@ with Q1:
     st.plotly_chart(fig_profit_by_volume,use_container_width=True)
 
 with Q2:
-    fig_sales_per_day = px.bar(df1,x='Year',
+    fig_sales_per_day = px.bar(df1,x='Month',
                                     y=['Net Sales'],
                                     color='Discounts',
                                     title='<b>Sales figure for the past two years</b>')
