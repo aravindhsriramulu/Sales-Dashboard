@@ -26,15 +26,15 @@ with st.sidebar:
                                 options=df['Client'].unique(),
                                 default=df['Client'].unique())
 
-    Type_filter = st.multiselect(label='Select the Client Type',
-                            options=df['Client Type'].unique(),
-                            default=df['Client Type'].unique())
+    Month_filter = st.multiselect(label='Select the Month',
+                            options=df['Month'].unique(),
+                            default=df['Month'].unique())
 
     Brand_filter = st.multiselect(label='Select the Brand',
                             options=df['Brand'].unique(),
                             default=df['Brand'].unique())
 
-df1 = df.query('Client == @Client_filter & Type == @Type_filter & Brand == @Brand_filter')
+df1 = df.query('Client == @Client_filter & Month == @Month_filter & Brand == @Brand_filter')
 
 total_volume = float(df1['Volume'].sum())
 total_gross_sales = float(df1['Gross Sales'].sum())
