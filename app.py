@@ -3,7 +3,7 @@ import streamlit as st
 import plotly.express as px
 from numerize.numerize import numerize
 
-st.set_page_config(page_title = 'Sales Dashboard',
+st.set_page_config(page_title = 'Water Bottles Sales Dashboard',
                     layout='wide',
                     initial_sidebar_state='collapsed')
 
@@ -84,18 +84,15 @@ with Q1:
     st.plotly_chart(fig_profit_by_volume,use_container_width=True)
 
 with Q2:
-    fig_sales_per_day = px.bar(df1,x='date',
-                                    y=['Net Sales'],
-                                    color='Discounts',
-                                    title='<b>Sales figure for the past two years</b>')
-    fig_sales_per_day.update_xaxes(rangeslider_visible=True)
-    fig_sales_per_day.update_layout(xaxis_range=['2015-01','2016-12'],
-                                        showlegend = False,
-                                        title = {'x' : 0.5},
-                                        plot_bgcolor = "rgba(0,0,0,0)",
-                                        xaxis =(dict(showgrid = False)),
-                                        yaxis =(dict(showgrid = False)),)
-    st.plotly_chart(fig_sales_per_day,use_container_width=True)
+  def get_table():
+    df1['Gross Profit'] =round(df1['Net Sales'] + df1['Cost of Goods Sold'],3)
+    df1['Fully Delivered Margin'] = round(df1['Net Sales'] + df1['Cost of Goods Sold'] + df1['Distribution'] + df1['Warehousing'],2)
+    datatable = df[['Material Description', 'Fully Delivered Margin','Gross Profit']].sort_values(by=['Gross Profit'], ascending=False)
+    return datatable
+
+    datatable = get_table()
+    st.markdown("Material-wise profit and margin contribution")
+    st.table(datatable)# will display the table
   
 Q3,Q4 = st.columns(2)
 
