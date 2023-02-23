@@ -84,23 +84,21 @@ with Q1:
     st.plotly_chart(fig_profit_by_volume,use_container_width=True)
 
 with Q2:
-    df2 = df1.groupby(by = ['Client Type']).sum()[['Gross Profit','Fully Delivered Margin']].reset_index()
-    df1['Gross Profit'] =round(df1['Net Sales'] + df1['Cost of Goods Sold'],3)
-    df1['Fully Delivered Margin'] = round(df2['Net Sales'] + df1['Cost of Goods Sold'] + df1['Distribution'] + df1['Warehousing'],2)
-    fig_profit_by_volume = px.bar(df2,
-                            x='Client Type',
-                            y='Fully Delivered Margin',
-                            title='<b>How each client has contributed margin</b>')
-    fig_profit_by_volume.update_layout(title = {'x' : 0.5},
-                                    plot_bgcolor = "rgba(0,0,0,0)",
-                                    xaxis =(dict(showgrid = False)),
-                                    yaxis =(dict(showgrid = False)))
-    st.plotly_chart(fig_profit_by_volume,use_container_width=True)
+    fig_impressions_per_day = px.bar(df3,x='Client Type',
+                                    y=['Gross Profit'],
+                                    title='<b>Overall Profit by Sector</b>')
+    fig_impressions_per_day.update_xaxes(rangeslider_visible=False),
+                                        showlegend = False,
+                                        title = {'x' : 0.5},
+                                         plot_bgcolor = "rgba(0,0,0,0)",
+                                        xaxis =(dict(showgrid = False)),
+                                        yaxis =(dict(showgrid = False)),)
+    st.plotly_chart(fig_impressions_per_day,use_container_width=True)
   
 Q3,Q4 = st.columns(2)
 
 with Q3:
-    df4 = df1.groupby(by='Client Type').sum()[['Volume']].reset_index()
+    df4 = df1.groupby(by='Year').sum()[['Volume']].reset_index()
     fig_diff_client_type = px.pie(df4,names='Client Type',values='Volume',title='<b>Client Volume Stats</b>')
     fig_diff_client_type.update_layout(title = {'x':0.5}, plot_bgcolor = "rgba(0,0,0,0)")
     st.plotly_chart(fig_diff_client_type,use_container_width=True)
