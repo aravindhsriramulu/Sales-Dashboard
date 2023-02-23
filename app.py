@@ -89,7 +89,7 @@ with Q2:
                                     color='Discounts',
                                     title='<b>Sales figure for the past two years</b>')
     fig_sales_per_day.update_xaxes(rangeslider_visible=True)
-    fig_sales_per_day.update_layout(xaxis_range=['2015-01-01','2016-12-31'],
+    fig_sales_per_day.update_layout(xaxis_range=['2015-01','2016-12'],
                                         showlegend = False,
                                         title = {'x' : 0.5},
                                         plot_bgcolor = "rgba(0,0,0,0)",
