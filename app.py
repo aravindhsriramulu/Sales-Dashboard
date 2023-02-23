@@ -115,8 +115,8 @@ with Q3:
 with Q4:
     df5 = df1.groupby(by='Size').sum()[['Net Sales','Cost of Goods Sold', 'Distribution', 'Warehousing']].reset_index()
     df5['Fully Delivered Margin'] = round(df5['Net Sales'] + df5['Cost of Goods Sold'] + df5['Distribution'] + df5['Warehousing'],2)
-    fig_FDM_by_size = px.bar(df5,x = 'size',y='Fully Delivered Margin',title='<b>How FDM changes according to size</b>')
+    fig_FDM_by_size = px.bar(df5,x='size',y='Fully Delivered Margin',title='<b>How FDM changes according to size</b>')
     fig_FDM_by_size.update_layout(title = {'x':0.5},xaxis =(dict(showgrid = False)),yaxis =(dict(showgrid = False)), plot_bgcolor = "rgba(0,0,0,0)")
-    st.plotly_chart(fig_CPC_by_age,use_container_width=True)
+    st.plotly_chart(fig_FDM_by_size,use_container_width=True)
 
 
