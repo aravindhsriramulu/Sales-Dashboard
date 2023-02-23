@@ -15,7 +15,7 @@ def get_data():
 
 df = get_data()
 
-header_left,header_mid,header_right = st.columns([1,2],gap='large')
+header_left,header_mid,header_right = st.columns([1,2,1],gap='large')
 
 with header_mid:
     st.title('Sales Dashboard')
@@ -25,12 +25,16 @@ with st.sidebar:
     Client_filter = st.multiselect(label= 'Select the Client Type',
                                 options=df['Client Type'].unique(),
                                 default=df['Client Type'].unique())
+    
+    Year_filter = st.multiselect(label='Select the Year',
+                            options=df['Year'].unique(),
+                            default=df['Year'].unique())
 
     Brand_filter = st.multiselect(label='Select the Brand',
                             options=df['Brand'].unique(),
                             default=df['Brand'].unique())
 
-df1 = df.query('Client == @Client_filter & Brand == @Brand_filter')
+df1 = df.query('Client == @Client_filter & Year == @Year_filter & Brand == @Brand_filter')
 
 total_volume = float(df1['Volume'].sum())
 total_gross_sales = float(df1['Gross Sales'].sum())
