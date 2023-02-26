@@ -12,6 +12,7 @@ import plotly.graph_objects as go
 st.set_page_config(layout = 'wide')
 
 st.markdown("<h1 style = 'text-align: center;'> Clustering Sales Dataset </h1>", unsafe_allow_html = True)
+st.subheader('The sales dataset has been clustered with kmeans into five segments. Lets explore these five segments to how packs, size, brand and client have a substantial impact on the gross profit')
 
 # Reading the dataset
 
@@ -374,22 +375,23 @@ with tab4:
     st.text("Kmart super center is the leading client with a gross profit of over $4M")
 
 with tab5:
-    st.header('Age Distribution')
+    st.header('Client Type Distribution')
     st.plotly_chart(fig_typefour)
-    st.text("Kmart super center is the leading client with a gross profit of over $4M")
+    st.text("Supermarkets have over $1.8M profit share while Discounters, Grocery and Big-box has over $3.6M, $2.9M and $1.5M")
     
-    st.header('Age Distribution')
-    st.write(f'In this plot, it is possible to observe the presence of outliers. The ages **around and over 100** are most likely erroneous data inputs. These errors may have been made by accident or on purpose. For instance, some users may not want to disclose their personal information.')
+    st.header('Pack vs Profit Distribution')
     st.plotly_chart(fig_packfour)
+    st.text("4X and 6X is the most profitable pack, with an average gross profit margin of above $2.5M")
 
-    st.header('Age Distribution')
-    st.write(f'In this plot, it is possible to observe the presence of outliers. The ages **around and over 100** are most likely erroneous data inputs. These errors may have been made by accident or on purpose. For instance, some users may not want to disclose their personal information.')
+    st.header('Size vs Profit Distribution')
     st.plotly_chart(fig_sizefour)
+    st.text("2.25L and 1.5L are the most profitable size with $5M and $4m respectively")
     
-    st.header('Age Distribution')
-    st.write(f'In this plot, it is possible to observe the presence of outliers. The ages **around and over 100** are most likely erroneous data inputs. These errors may have been made by accident or on purpose. For instance, some users may not want to disclose their personal information.')
+    st.header('Brand vs Profit Distribution')
     st.plotly_chart(fig_brandfour)
+    st.text("Dundy and its subsidiaries have a gross profit of over $10M while Evan Vitamin is the least profitable brand with gross profit below $50K")
     
-    st.header('Age Distribution')
-    st.write(f'In this plot, it is possible to observe the presence of outliers. The ages **around and over 100** are most likely erroneous data inputs. These errors may have been made by accident or on purpose. For instance, some users may not want to disclose their personal information.')
+    st.header('Client vs Profit Distribution')
     st.plotly_chart(fig_clientfour)
+    st.text("Super Target and Trader's Joe continue to dominate the market with a gross profit of over $2.5M independently")
+
