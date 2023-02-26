@@ -1,11 +1,13 @@
-#Contents of ~/Pages/app.py
 import streamlit as st
+from multiapp import MultiApp
+from apps import home, data, model # import your app modules here
 
-st.markdown("# app 🎈")
-st.sidebar.markdown("# app 🎈")
+app = MultiApp()
 
-#Contents of ~/Pages/cluster.py
-import streamlit as st
+st.markdown("""# Multi-Page App""")
 
-st.markdown("# cluster ❄️")
-st.sidebar.markdown("# cluster ❄️")
+# Add all your application here
+app.add_app("app", app.app)
+app.add_app("cluster", cluster.app)
+# The main app
+app.run()
