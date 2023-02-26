@@ -12,7 +12,6 @@ import plotly.graph_objects as go
 st.set_page_config(layout = 'wide')
 
 st.markdown("<h1 style = 'text-align: center;'> Clustering Sales Dataset </h1>", unsafe_allow_html = True)
-st.markdown("<h3 style = 'text-align: center;'> A Web App by <b><a href = 'https://github.com/zilmabezerra'> Aravindh </a></b></h3>", unsafe_allow_html = True)
 
 # Reading the dataset
 
@@ -287,29 +286,29 @@ fig_clientfour.update_yaxes(automargin = True, title_standoff = 10)
 
 # Creating the streamlit layout
 
-tab1, tab2, tab3, tab4, tab5 = st.tabs(['**Cluster Zero**', '**Cluster One**', '**Cluster Two**', '**Cluster Three**',
-                                        '**Cluster Four**'])
+tab1, tab2, tab3, tab4, tab5 = st.tabs(['**Segment Zero**', '**Segment One**', '**Segment Two**', '**Segment Three**',
+                                        '**Segment Four**'])
 
 with tab1:
-    st.header('Age Distribution')
-    st.write(f'In this plot, it is possible to observe the presence of outliers. The ages **around and over 100** are most likely erroneous data inputs. These errors may have been made by accident or on purpose. For instance, some users may not want to disclose their personal information.')
+    st.header('Client Type Distribution')
     st.plotly_chart(fig_typezero)
+    st.write(f'Supermarkets leads the chart with highest profit of $700K while Discounters, Grocery and Big-box have $350K, $200k and $142K.')
     
-    st.header('Age Distribution')
-    st.write(f'In this plot, it is possible to observe the presence of outliers. The ages **around and over 100** are most likely erroneous data inputs. These errors may have been made by accident or on purpose. For instance, some users may not want to disclose their personal information.')
+    st.header('Pack vs Profit Distribution')
     st.plotly_chart(fig_packzero)
+    st.write(f'4X and 15X achieve a gross profit of over $200K. Contrastingly, 6X and 20X attain the lowest profit figure of $60K.')
 
-    st.header('Age Distribution')
-    st.write(f'In this plot, it is possible to observe the presence of outliers. The ages **around and over 100** are most likely erroneous data inputs. These errors may have been made by accident or on purpose. For instance, some users may not want to disclose their personal information.')
+    st.header('Size vs Profit Distribution')
     st.plotly_chart(fig_sizezero)
+    st.write(f'500ML is the ideal range for sale in this segment. It has recorded a gross profit if above $400K. Other sizes manage to cross the threshold of $100K gross profit except for the 750ML size which records the lowest gross profit of $10K.')
     
-    st.header('Age Distribution')
-    st.write(f'In this plot, it is possible to observe the presence of outliers. The ages **around and over 100** are most likely erroneous data inputs. These errors may have been made by accident or on purpose. For instance, some users may not want to disclose their personal information.')
+    st.header('Brand vs Profit Distribution')
     st.plotly_chart(fig_brandzero)
-    
-    st.header('Age Distribution')
-    st.write(f'In this plot, it is possible to observe the presence of outliers. The ages **around and over 100** are most likely erroneous data inputs. These errors may have been made by accident or on purpose. For instance, some users may not want to disclose their personal information.')
+    st.write(f'Zumba Orange and Pit Bull are the most profitable brands, with a gross profit of $500K and $390K respectively while its subsidiaries does not even cross the $200K threshold. Evan Vitamin does not even manage to hit $10K gross profit.')
+
+    st.header('Client vs Profit Distribution')
     st.plotly_chart(fig_clientzero)
+    st.write(f'ShopRite is the most profitable client with a profit mark of $200K while Publix is the least profitable client with a profit mark of less than $20K.')
     
 with tab2:
     st.header('Age Distribution')
