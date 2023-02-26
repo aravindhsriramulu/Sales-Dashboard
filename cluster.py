@@ -90,6 +90,8 @@ fig_clientzero.update_yaxes(automargin = True, title_standoff = 10)
 # Plotting four charts for erp cluster one
 
 erponecluster = erp[erp['Cluster']==1]
+fig_typeone = px.pie(erponecluster, values='Gross Profit', names='Client Type', color='Client Type')
+
 fig_packone = px.bar(erponecluster,
                  x = erponecluster['Pack'],
                  y = erponecluster['Gross Profit'],
@@ -137,6 +139,8 @@ fig_clientone.update_yaxes(automargin = True, title_standoff = 10)
 # Plotting four charts for erp cluster two
 
 erptwocluster = erp[erp['Cluster']==2]
+fig_typetwe = px.pie(erptwocluster, values='Gross Profit', names='Client Type', color='Client Type')
+
 fig_packtwo = px.bar(erptwocluster,
                  x = erptwocluster['Pack'],
                  y = erptwocluster['Gross Profit'],
@@ -185,6 +189,8 @@ fig_clienttwo.update_yaxes(automargin = True, title_standoff = 10)
 # Plotting four charts for erp cluster three
 
 erpthreecluster = erp[erp['Cluster']==3]
+fig_typethree = px.pie(erpthreecluster, values='Gross Profit', names='Client Type', color='Client Type')
+
 fig_packthree = px.bar(erpthreecluster,
                  x = erpthreecluster['Pack'],
                  y = erpthreecluster['Gross Profit'],
@@ -232,6 +238,8 @@ fig_clientthree.update_yaxes(automargin = True, title_standoff = 10)
 # Plotting four charts for erp cluster four
 
 erpfourcluster = erp[erp['Cluster']==4]
+fig_typefour = px.pie(erpfourcluster, values='Gross Profit', names='Client Type', color='Client Type')
+
 fig_packfour = px.bar(erpfourcluster,
                  x = erpfourcluster['Pack'],
                  y = erpfourcluster['Gross Profit'],
@@ -306,6 +314,10 @@ with tab1:
 with tab2:
     st.header('Age Distribution')
     st.write(f'In this plot, it is possible to observe the presence of outliers. The ages **around and over 100** are most likely erroneous data inputs. These errors may have been made by accident or on purpose. For instance, some users may not want to disclose their personal information.')
+    st.plotly_chart(fig_typeone)
+    
+    st.header('Age Distribution')
+    st.write(f'In this plot, it is possible to observe the presence of outliers. The ages **around and over 100** are most likely erroneous data inputs. These errors may have been made by accident or on purpose. For instance, some users may not want to disclose their personal information.')
     st.plotly_chart(fig_packone)
 
     st.header('Age Distribution')
@@ -321,6 +333,10 @@ with tab2:
     st.plotly_chart(fig_clientone)
 
 with tab3:
+    st.header('Age Distribution')
+    st.write(f'In this plot, it is possible to observe the presence of outliers. The ages **around and over 100** are most likely erroneous data inputs. These errors may have been made by accident or on purpose. For instance, some users may not want to disclose their personal information.')
+    st.plotly_chart(fig_typetwo)
+    
     st.header('Age Distribution')
     st.write(f'In this plot, it is possible to observe the presence of outliers. The ages **around and over 100** are most likely erroneous data inputs. These errors may have been made by accident or on purpose. For instance, some users may not want to disclose their personal information.')
     st.plotly_chart(fig_packtwo)
@@ -340,6 +356,10 @@ with tab3:
 with tab4:
     st.header('Age Distribution')
     st.write(f'In this plot, it is possible to observe the presence of outliers. The ages **around and over 100** are most likely erroneous data inputs. These errors may have been made by accident or on purpose. For instance, some users may not want to disclose their personal information.')
+    st.plotly_chart(fig_typethree)
+    
+    st.header('Age Distribution')
+    st.write(f'In this plot, it is possible to observe the presence of outliers. The ages **around and over 100** are most likely erroneous data inputs. These errors may have been made by accident or on purpose. For instance, some users may not want to disclose their personal information.')
     st.plotly_chart(fig_packthree)
 
     st.header('Age Distribution')
@@ -355,6 +375,10 @@ with tab4:
     st.plotly_chart(fig_clientthree)
 
 with tab5:
+    st.header('Age Distribution')
+    st.write(f'In this plot, it is possible to observe the presence of outliers. The ages **around and over 100** are most likely erroneous data inputs. These errors may have been made by accident or on purpose. For instance, some users may not want to disclose their personal information.')
+    st.plotly_chart(fig_typefour)
+    
     st.header('Age Distribution')
     st.write(f'In this plot, it is possible to observe the presence of outliers. The ages **around and over 100** are most likely erroneous data inputs. These errors may have been made by accident or on purpose. For instance, some users may not want to disclose their personal information.')
     st.plotly_chart(fig_packfour)
