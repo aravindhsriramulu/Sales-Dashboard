@@ -311,25 +311,25 @@ with tab1:
     st.text("ShopRite is the most profitable client with a profit mark of $200K while Publix is the least profitable client with a profit mark of less than $20K")
     
 with tab2:
-    st.header('Age Distribution')
-    st.write(f'In this plot, it is possible to observe the presence of outliers. The ages **around and over 100** are most likely erroneous data inputs. These errors may have been made by accident or on purpose. For instance, some users may not want to disclose their personal information.')
+    st.header('Client Type Distribution')
     st.plotly_chart(fig_typeone)
+    st.text("Supermarkets is the leader with a gross profit of over $5.8M while Discounters, Grocery and Big-box have $2.6M, $1.8M and $1M")
     
-    st.header('Age Distribution')
-    st.write(f'In this plot, it is possible to observe the presence of outliers. The ages **around and over 100** are most likely erroneous data inputs. These errors may have been made by accident or on purpose. For instance, some users may not want to disclose their personal information.')
+    st.header('Pack vs Profit Distribution')
     st.plotly_chart(fig_packone)
+    st.text("All packs have an average gross profit of $500K while the topmost packs are 12X and 15X with a gross profit of $2.4M and $1.4M")
 
-    st.header('Age Distribution')
-    st.write(f'In this plot, it is possible to observe the presence of outliers. The ages **around and over 100** are most likely erroneous data inputs. These errors may have been made by accident or on purpose. For instance, some users may not want to disclose their personal information.')
+    st.header('Size vs Profit Distribution')
+    st.text("500ML is the highest profitable category with a gross profit if over $4M while other sizes like 250ML, 750ML and 600ML cross the $1.5M threshold. Only 1.25L size range has the least profitable mark threshold of $1M")
     st.plotly_chart(fig_sizeone)
     
-    st.header('Age Distribution')
-    st.write(f'In this plot, it is possible to observe the presence of outliers. The ages **around and over 100** are most likely erroneous data inputs. These errors may have been made by accident or on purpose. For instance, some users may not want to disclose their personal information.')
+    st.header('Brand vs Profit Distribution')
     st.plotly_chart(fig_brandone)
+    st.text("Dundy and its subsidiaries is the only profitable brand with an accumulated gross profit of over $8M while Crocky, Evan Vitamin, Buratino and its subsidiaries are under the $500K mark")
     
-    st.header('Age Distribution')
-    st.write(f'In this plot, it is possible to observe the presence of outliers. The ages **around and over 100** are most likely erroneous data inputs. These errors may have been made by accident or on purpose. For instance, some users may not want to disclose their personal information.')
+    st.header('Client vs Profit Distribution')
     st.plotly_chart(fig_clientone)
+    st.text("Super Target, Trader Joe's, ShopRite, WinCo Foods, Walmart - Supermarkets cross the $1.5M threshold while Sam's Club, Safeway and Walmart Dicounters have their gross profit below $1M.")
 
 with tab3:
     st.header('Age Distribution')
