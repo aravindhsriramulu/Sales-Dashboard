@@ -9,7 +9,7 @@ import plotly.graph_objects as go
 
 # Setting page configurations
 
-st.set_page_config(layout = 'wide', page_icon = '📙')
+st.set_page_config(layout = 'wide')
 
 st.markdown("<h1 style = 'text-align: center;'> Clustering Sales Dataset </h1>", unsafe_allow_html = True)
 st.markdown("<h3 style = 'text-align: center;'> A Web App by <b><a href = 'https://github.com/zilmabezerra'> Aravindh </a></b></h3>", unsafe_allow_html = True)
