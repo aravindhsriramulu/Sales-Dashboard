@@ -4,7 +4,7 @@ from st_pages import Page, show_pages, add_page_title
 # should be
 show_pages(
     [
-        Page("Pages/app.py", "Home", "🏠"),
-        Page("Pages/cluster.py", "Page 2", ":books:"),
+        Page("Pages/app.py", "Dashboard"),
+        Page("Pages/cluster.py", "Segmentation Report"),
     ]
 )
