@@ -1,4 +1,4 @@
 plotly_express
 numerize
 streamlit==1.18.0
-multiapp
+MultiApp
