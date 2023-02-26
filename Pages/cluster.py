@@ -332,51 +332,51 @@ with tab2:
     st.text("Super Target, Trader Joe's, ShopRite, WinCo Foods, Walmart - Supermarkets cross the $1.5M threshold while Sam's Club, Safeway and Walmart Dicounters have their gross profit below $1M.")
 
 with tab3:
-    st.header('Age Distribution')
-    st.write(f'In this plot, it is possible to observe the presence of outliers. The ages **around and over 100** are most likely erroneous data inputs. These errors may have been made by accident or on purpose. For instance, some users may not want to disclose their personal information.')
+    st.header('Client Type Distribution')
     st.plotly_chart(fig_typetwo)
+    st.text("Supermarkets have over $2M gross profit while Big-box and discounters have over $600K")
     
-    st.header('Age Distribution')
-    st.write(f'In this plot, it is possible to observe the presence of outliers. The ages **around and over 100** are most likely erroneous data inputs. These errors may have been made by accident or on purpose. For instance, some users may not want to disclose their personal information.')
+    st.header('Pack vs Profit Distribution')
     st.plotly_chart(fig_packtwo)
+    st.text("18X and 20X are the least profitable packs with a gross profit of under $150K while other packs are above $400K")
 
-    st.header('Age Distribution')
-    st.write(f'In this plot, it is possible to observe the presence of outliers. The ages **around and over 100** are most likely erroneous data inputs. These errors may have been made by accident or on purpose. For instance, some users may not want to disclose their personal information.')
+    st.header('Size vs Profit Distribution')
     st.plotly_chart(fig_sizetwo)
+    st.text("The most profitable size is 250ML with a gross profit of over $700k and the least profitable size is 750ML with a gross profit of $100K")
     
-    st.header('Age Distribution')
-    st.write(f'In this plot, it is possible to observe the presence of outliers. The ages **around and over 100** are most likely erroneous data inputs. These errors may have been made by accident or on purpose. For instance, some users may not want to disclose their personal information.')
+    st.header('Brand vs Profit Distribution')
     st.plotly_chart(fig_brandtwo)
+    st.text("Evan and Dundy One is the most profitable brand with a gross profit of over $800K")
     
-    st.header('Age Distribution')
-    st.write(f'In this plot, it is possible to observe the presence of outliers. The ages **around and over 100** are most likely erroneous data inputs. These errors may have been made by accident or on purpose. For instance, some users may not want to disclose their personal information.')
+    st.header('Client vs Profit Distribution')
     st.plotly_chart(fig_clienttwo)
+    st.text("Safeway is the least profitable client with a profit range below $100K")
 
 with tab4:
-    st.header('Age Distribution')
-    st.write(f'In this plot, it is possible to observe the presence of outliers. The ages **around and over 100** are most likely erroneous data inputs. These errors may have been made by accident or on purpose. For instance, some users may not want to disclose their personal information.')
+    st.header('Client Type Distribution')
     st.plotly_chart(fig_typethree)
+    st.text("Supermarket has a profit share of almost $8M while Discounters and Big-box of $4M and $3M")
     
-    st.header('Age Distribution')
-    st.write(f'In this plot, it is possible to observe the presence of outliers. The ages **around and over 100** are most likely erroneous data inputs. These errors may have been made by accident or on purpose. For instance, some users may not want to disclose their personal information.')
+    st.header('Pack vs Profit Distribution')
     st.plotly_chart(fig_packthree)
+    st.text("18X and 20X are the least profitable packs with a gross profit range below $1M while other size are above $1M")
 
-    st.header('Age Distribution')
-    st.write(f'In this plot, it is possible to observe the presence of outliers. The ages **around and over 100** are most likely erroneous data inputs. These errors may have been made by accident or on purpose. For instance, some users may not want to disclose their personal information.')
+    st.header('Size vs Profit Distribution')
     st.plotly_chart(fig_sizethree)
+    st.text("2.25L, 1.75L and 500ML have a profit range of over $2M while 250ML, 750ML and 1.25L have gross profit below $1.5M")
     
-    st.header('Age Distribution')
-    st.write(f'In this plot, it is possible to observe the presence of outliers. The ages **around and over 100** are most likely erroneous data inputs. These errors may have been made by accident or on purpose. For instance, some users may not want to disclose their personal information.')
+    st.header('Brand vs Profit Distribution')
     st.plotly_chart(fig_brandthree)
+    st.text("Dundy Diet, Dundy Max and Dundy Free have a gross profit over $3M")
     
-    st.header('Age Distribution')
-    st.write(f'In this plot, it is possible to observe the presence of outliers. The ages **around and over 100** are most likely erroneous data inputs. These errors may have been made by accident or on purpose. For instance, some users may not want to disclose their personal information.')
+    st.header('Client Vs Distribution')
     st.plotly_chart(fig_clientthree)
+    st.text("Kmart super center is the leading client with a gross profit of over $4M")
 
 with tab5:
     st.header('Age Distribution')
-    st.write(f'In this plot, it is possible to observe the presence of outliers. The ages **around and over 100** are most likely erroneous data inputs. These errors may have been made by accident or on purpose. For instance, some users may not want to disclose their personal information.')
     st.plotly_chart(fig_typefour)
+    st.text("Kmart super center is the leading client with a gross profit of over $4M")
     
     st.header('Age Distribution')
     st.write(f'In this plot, it is possible to observe the presence of outliers. The ages **around and over 100** are most likely erroneous data inputs. These errors may have been made by accident or on purpose. For instance, some users may not want to disclose their personal information.')
