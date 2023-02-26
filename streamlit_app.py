@@ -1,18 +1,10 @@
-# Contents of ~/streamlit_app.py
-import streamlit as st
+from st_pages import Page, show_pages, add_page_title
 
-def app():
-    st.markdown("# app 🎈")
-    st.sidebar.markdown("# app 🎈")
-
-def cluster():
-    st.markdown("# cluster ❄️")
-    st.sidebar.markdown("# cluster ❄️")
-
-page_names_to_funcs = {
-    "app": app,
-    "cluster": cluster,
-}
-
-selected_page = st.sidebar.selectbox("Select a page", page_names_to_funcs.keys())
-page_names_to_funcs[selected_page]()
+# Specify what pages should be shown in the sidebar, and what their titles and icons
+# should be
+show_pages(
+    [
+        Page("Pages/app.py", "Home", "🏠"),
+        Page("Pages/cluster.py", "Page 2", ":books:"),
+    ]
+)
