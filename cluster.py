@@ -139,7 +139,7 @@ fig_clientone.update_yaxes(automargin = True, title_standoff = 10)
 # Plotting four charts for erp cluster two
 
 erptwocluster = erp[erp['Cluster']==2]
-fig_typetwe = px.pie(erptwocluster, values='Gross Profit', names='Client Type', color='Client Type')
+fig_typetwo = px.pie(erptwocluster, values='Gross Profit', names='Client Type', color='Client Type')
 
 fig_packtwo = px.bar(erptwocluster,
                  x = erptwocluster['Pack'],
