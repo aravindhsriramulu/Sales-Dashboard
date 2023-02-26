@@ -7,13 +7,8 @@ st.set_page_config(page_title = 'Water Bottles Sales Dashboard',
                     layout='wide',
                     initial_sidebar_state='collapsed')
 
-@st.cache
-def get_data():
-    df = pd.read_csv('erpdata.csv')
-    df['date']= pd.to_datetime(df['Period'])
-    return df
+df = pd.read_csv('erpdata.csv')
 
-df = get_data()
 
 header_left,header_mid,header_right = st.columns([1,2,1],gap='large')
 
