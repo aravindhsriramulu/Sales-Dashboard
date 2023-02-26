@@ -12,6 +12,7 @@ import plotly.graph_objects as go
 st.set_page_config(layout = 'wide')
 
 st.markdown("<h1 style = 'text-align: center;'> Clustering Sales Dataset </h1>", unsafe_allow_html = True)
+
 st.subheader('The sales dataset has been clustered with kmeans into five segments. Lets explore these five segments to how packs, size, brand and client have a substantial impact on the gross profit')
 
 # Reading the dataset
