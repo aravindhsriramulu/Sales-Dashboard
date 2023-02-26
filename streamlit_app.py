@@ -1,13 +1,18 @@
+# Contents of ~/streamlit_app.py
 import streamlit as st
-from multiapp import MultiApp
-from apps import home, data, model # import your app modules here
 
-app = MultiApp()
+def app():
+    st.markdown("# app 🎈")
+    st.sidebar.markdown("# app 🎈")
 
-st.markdown("""# Multi-Page App""")
+def cluster():
+    st.markdown("# cluster ❄️")
+    st.sidebar.markdown("# cluster ❄️")
 
-# Add all your application here
-app.add_app("app", app.app)
-app.add_app("cluster", cluster.app)
-# The main app
-app.run()
+page_names_to_funcs = {
+    "app": app,
+    "cluster": cluster,
+}
+
+selected_page = st.sidebar.selectbox("Select a page", page_names_to_funcs.keys())
+page_names_to_funcs[selected_page]()
