@@ -292,23 +292,23 @@ tab1, tab2, tab3, tab4, tab5 = st.tabs(['**Segment Zero**', '**Segment One**', '
 with tab1:
     st.header('Client Type Distribution')
     st.plotly_chart(fig_typezero)
-    st.subheader("Supermarkets leads the chart with highest profit of $700K while Discounters, Grocery and Big-box have $350K, $200k and $142K.")
+    st.text("Supermarkets leads the chart with highest profit of $700K while Discounters, Grocery and Big-box have $350K, $200k and $142K")
     
     st.header('Pack vs Profit Distribution')
     st.plotly_chart(fig_packzero)
-    st.write(f'4X and 15X achieve a gross profit of over $200K. Contrastingly, 6X and 20X attain the lowest profit figure of $60K.')
+    st.text("4X and 15X achieve a gross profit of over $200K. Contrastingly, 6X and 20X attain the lowest profit figure of $60K")
 
     st.header('Size vs Profit Distribution')
     st.plotly_chart(fig_sizezero)
-    st.write(f'500ML is the ideal range for sale in this segment. It has recorded a gross profit if above $400K. Other sizes manage to cross the threshold of $100K gross profit except for the 750ML size which records the lowest gross profit of $10K.')
+    st.text("500ML is the ideal range for sale in this segment. It has recorded a gross profit if above $400K. Other sizes manage to cross the threshold of $100K gross profit except for the 750ML size which records the lowest gross profit of $10K")
     
     st.header('Brand vs Profit Distribution')
     st.plotly_chart(fig_brandzero)
-    st.write(f'Zumba Orange and Pit Bull are the most profitable brands, with a gross profit of $500K and $390K respectively while its subsidiaries does not even cross the $200K threshold. Evan Vitamin does not even manage to hit $10K gross profit.')
+    st.text("Zumba Orange and Pit Bull are the most profitable brands, with a gross profit of $500K and $390K respectively while its subsidiaries does not even cross the $200K threshold. Evan Vitamin does not even manage to hit $10K gross profit")
 
     st.header('Client vs Profit Distribution')
     st.plotly_chart(fig_clientzero)
-    st.write(f'ShopRite is the most profitable client with a profit mark of $200K while Publix is the least profitable client with a profit mark of less than $20K.')
+    st.text("ShopRite is the most profitable client with a profit mark of $200K while Publix is the least profitable client with a profit mark of less than $20K")
     
 with tab2:
     st.header('Age Distribution')
