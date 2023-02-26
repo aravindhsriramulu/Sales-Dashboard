@@ -41,6 +41,8 @@ custom_template = {'layout':
 # Plotting four charts for erp cluster zero
 
 erpzerothcluster = erp[erp['Cluster']==0]
+fig_typezero = px.pie(erpzerothcluster, values='Gross Profit', names='Client Type', color='Client Type')
+
 fig_packzero = px.bar(erpzerothcluster,
                  x = erpzerothcluster['Pack'],
                  y = erpzerothcluster['Gross Profit'],
@@ -281,6 +283,10 @@ tab1, tab2, tab3, tab4, tab5 = st.tabs(['**Cluster Zero**', '**Cluster One**', '
                                         '**Cluster Four**'])
 
 with tab1:
+    st.header('Age Distribution')
+    st.write(f'In this plot, it is possible to observe the presence of outliers. The ages **around and over 100** are most likely erroneous data inputs. These errors may have been made by accident or on purpose. For instance, some users may not want to disclose their personal information.')
+    st.plotly_chart(fig_typezero)
+    
     st.header('Age Distribution')
     st.write(f'In this plot, it is possible to observe the presence of outliers. The ages **around and over 100** are most likely erroneous data inputs. These errors may have been made by accident or on purpose. For instance, some users may not want to disclose their personal information.')
     st.plotly_chart(fig_packzero)
