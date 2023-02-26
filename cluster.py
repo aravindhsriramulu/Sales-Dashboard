@@ -329,7 +329,7 @@ with tab3:
     
     st.header('Age Distribution')
     st.write(f'In this plot, it is possible to observe the presence of outliers. The ages **around and over 100** are most likely erroneous data inputs. These errors may have been made by accident or on purpose. For instance, some users may not want to disclose their personal information.')
-    st.plotly_chart(fig_clientwo)
+    st.plotly_chart(fig_clienttwo)
 
 with tab4:
     st.header('Age Distribution')
