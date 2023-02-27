@@ -48,8 +48,7 @@ fig_packzero = px.bar(erpzerothcluster,
                  x = erpzerothcluster['Pack'],
                  y = erpzerothcluster['Gross Profit'],
                  color = erpzerothcluster['Client Type'],
-                 title = "<b>How profit looks with respect to packs</b>",
-                 color_discrete_sequence = ['#636EFA'])
+                 title = "<b>How profit looks with respect to packs</b>")
 
 fig_packzero.update_layout(height = 600, width = 1000, template = custom_template, xaxis_title = '<b>Pack</b>',
                       yaxis_title = '<b>Gross Profit</b>')
