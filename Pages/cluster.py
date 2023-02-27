@@ -58,6 +58,7 @@ fig_packzero.update_yaxes(automargin = True, title_standoff = 10)
 fig_sizezero = px.bar(erpzerothcluster,
                  x = erpzerothcluster['Size'],
                  y = erpzerothcluster['Gross Profit'],
+                 color = erpzerothcluster['Client Type'],
                  title = "<b>How profit looks with respect to size</b>",
                  color_discrete_sequence = ['#636EFA'])
 
@@ -69,6 +70,7 @@ fig_sizezero.update_yaxes(automargin = True, title_standoff = 10)
 fig_brandzero = px.bar(erpzerothcluster,
                  x = erpzerothcluster['Brand'],
                  y = erpzerothcluster['Gross Profit'],
+                 color = erpzerothcluster['Client Type'],
                  title = "<b>How profit looks with respect to Brand</b>",
                  color_discrete_sequence = ['#636EFA'])
 
@@ -80,6 +82,7 @@ fig_brandzero.update_yaxes(automargin = True, title_standoff = 10)
 fig_clientzero = px.bar(erpzerothcluster,
                  x = erpzerothcluster['Client'],
                  y = erpzerothcluster['Gross Profit'],
+                 color = erpzerothcluster['Client Type'],
                  title = "<b>How profit looks with respect to Client</b>",
                  color_discrete_sequence = ['#636EFA'])
 
@@ -96,6 +99,7 @@ fig_typeone = px.pie(erponecluster, values='Gross Profit', names='Client Type', 
 fig_packone = px.bar(erponecluster,
                  x = erponecluster['Pack'],
                  y = erponecluster['Gross Profit'],
+                 color = erponecluster['Client Type'],
                  title = "<b>How profit looks with respect to packs</b>",
                  color_discrete_sequence = ['#636EFA'])
 
@@ -107,6 +111,7 @@ fig_packone.update_yaxes(automargin = True, title_standoff = 10)
 fig_sizeone = px.bar(erponecluster,
                  x = erponecluster['Size'],
                  y = erponecluster['Gross Profit'],
+                 color = erponecluster['Client Type'],
                  title = "<b>How profit looks with respect to size</b>",
                  color_discrete_sequence = ['#636EFA'])
 
@@ -118,6 +123,7 @@ fig_sizeone.update_yaxes(automargin = True, title_standoff = 10)
 fig_brandone = px.bar(erponecluster,
                  x = erponecluster['Brand'],
                  y = erponecluster['Gross Profit'],
+                 color = erponecluster['Client Type'],
                  title = "<b>How profit looks with respect to Brand</b>",
                  color_discrete_sequence = ['#636EFA'])
 
@@ -129,6 +135,7 @@ fig_brandone.update_yaxes(automargin = True, title_standoff = 10)
 fig_clientone = px.bar(erponecluster,
                  x = erponecluster['Client'],
                  y = erponecluster['Gross Profit'],
+                 color = erponecluster['Client Type'],
                  title = "<b>How profit looks with respect to Client</b>",
                  color_discrete_sequence = ['#636EFA'])
 
@@ -145,6 +152,7 @@ fig_typetwo = px.pie(erptwocluster, values='Gross Profit', names='Client Type', 
 fig_packtwo = px.bar(erptwocluster,
                  x = erptwocluster['Pack'],
                  y = erptwocluster['Gross Profit'],
+                 color = erptwocluster['Client Type'],
                  title = "<b>How profit looks with respect to packs</b>",
                  color_discrete_sequence = ['#636EFA'])
 
@@ -156,6 +164,7 @@ fig_packtwo.update_yaxes(automargin = True, title_standoff = 10)
 fig_sizetwo = px.bar(erptwocluster,
                  x = erptwocluster['Size'],
                  y = erptwocluster['Gross Profit'],
+                 color = erptwocluster['Client Type'],
                  title = "<b>How profit looks with respect to size</b>",
                  color_discrete_sequence = ['#636EFA'])
 
@@ -167,6 +176,7 @@ fig_sizetwo.update_yaxes(automargin = True, title_standoff = 10)
 fig_brandtwo = px.bar(erptwocluster,
                  x = erptwocluster['Brand'],
                  y = erptwocluster['Gross Profit'],
+                 color = erptwocluster['Client Type'],
                  title = "<b>How profit looks with respect to Brand</b>",
                  color_discrete_sequence = ['#636EFA'])
 
@@ -178,6 +188,7 @@ fig_brandtwo.update_yaxes(automargin = True, title_standoff = 10)
 fig_clienttwo = px.bar(erptwocluster,
                  x = erptwocluster['Client'],
                  y = erptwocluster['Gross Profit'],
+                 color = erptwocluster['Client Type'],
                  title = "<b>How profit looks with respect to Client</b>",
                  color_discrete_sequence = ['#636EFA'])
 
@@ -195,6 +206,7 @@ fig_typethree = px.pie(erpthreecluster, values='Gross Profit', names='Client Typ
 fig_packthree = px.bar(erpthreecluster,
                  x = erpthreecluster['Pack'],
                  y = erpthreecluster['Gross Profit'],
+                 color = erpthreecluster['Client Type'],
                  title = "<b>How profit looks with respect to packs</b>",
                  color_discrete_sequence = ['#636EFA'])
 
@@ -206,6 +218,7 @@ fig_packthree.update_yaxes(automargin = True, title_standoff = 10)
 fig_sizethree = px.bar(erpthreecluster,
                  x = erpthreecluster['Size'],
                  y = erpthreecluster['Gross Profit'],
+                 color = erpthreecluster['Client Type'],
                  title = "<b>How profit looks with respect to size</b>",
                  color_discrete_sequence = ['#636EFA'])
 
@@ -217,6 +230,7 @@ fig_sizethree.update_yaxes(automargin = True, title_standoff = 10)
 fig_brandthree = px.bar(erpthreecluster,
                  x = erpthreecluster['Brand'],
                  y = erpthreecluster['Gross Profit'],
+                 color = erpthreecluster['Client Type'],
                  title = "<b>How profit looks with respect to Brand</b>",
                  color_discrete_sequence = ['#636EFA'])
 
@@ -228,6 +242,7 @@ fig_brandthree.update_yaxes(automargin = True, title_standoff = 10)
 fig_clientthree = px.bar(erpthreecluster,
                  x = erpthreecluster['Client'],
                  y = erpthreecluster['Gross Profit'],
+                 color = erpthreecluster['Client Type'],
                  title = "<b>How profit looks with respect to Client</b>",
                  color_discrete_sequence = ['#636EFA'])
 
@@ -244,6 +259,7 @@ fig_typefour = px.pie(erpfourcluster, values='Gross Profit', names='Client Type'
 fig_packfour = px.bar(erpfourcluster,
                  x = erpfourcluster['Pack'],
                  y = erpfourcluster['Gross Profit'],
+                 color = erpfourcluster['Client Type'],
                  title = "<b>How profit looks with respect to packs</b>",
                  color_discrete_sequence = ['#636EFA'])
 
@@ -255,6 +271,7 @@ fig_packfour.update_yaxes(automargin = True, title_standoff = 10)
 fig_sizefour = px.bar(erpfourcluster,
                  x = erpfourcluster['Size'],
                  y = erpfourcluster['Gross Profit'],
+                 color = erpfourcluster['Client Type'],
                  title = "<b>How profit looks with respect to size</b>",
                  color_discrete_sequence = ['#636EFA'])
 
@@ -266,6 +283,7 @@ fig_sizefour.update_yaxes(automargin = True, title_standoff = 10)
 fig_brandfour = px.bar(erpfourcluster,
                  x = erpfourcluster['Brand'],
                  y = erpfourcluster['Gross Profit'],
+                 color = erpfourcluster['Client Type'],
                  title = "<b>How profit looks with respect to Brand</b>",
                  color_discrete_sequence = ['#636EFA'])
 
@@ -277,6 +295,7 @@ fig_brandfour.update_yaxes(automargin = True, title_standoff = 10)
 fig_clientfour = px.bar(erpfourcluster,
                  x = erpfourcluster['Client'],
                  y = erpfourcluster['Gross Profit'],
+                 color = erpfourcluster['Client Type'],
                  title = "<b>How profit looks with respect to Client</b>",
                  color_discrete_sequence = ['#636EFA'])
 
