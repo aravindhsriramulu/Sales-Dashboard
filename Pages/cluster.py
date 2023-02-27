@@ -48,7 +48,8 @@ packzero = erpzerothcluster.groupby(['Pack','Client Type'])['Gross Profit'].sum(
 fig_packzero = px.bar(packzero,
                  x = packzero['Pack'],
                  y = packzero['Gross Profit'],
-                 color = packzero['Client Type'],
+                 color = packzero['Client Type'], color_discrete_map={"Supermarkets": "red", "Discounters": "green", "Grocery": "blue", "Big-box": "goldenrod"},
+                 category_orders={"Client Type": ["Supermarkets", "Discounters", "Grocery", "Big-box"]},
                  barmode='group', title = "<b>How profit looks with respect to packs</b>")
 
 fig_packzero.update_layout(height = 600, width = 1000, template = custom_template, xaxis_title = '<b>Pack</b>',
