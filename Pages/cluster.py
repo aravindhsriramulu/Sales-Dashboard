@@ -42,7 +42,8 @@ custom_template = {'layout':
 # Plotting four charts for erp cluster zero
 
 erpzerothcluster = erp[erp['Cluster']==0]
-fig_typezero = px.pie(erpzerothcluster, values='Gross Profit', names='Client Type', color='Client Type')
+fig_typezero = px.pie(erpzerothcluster, values='Gross Profit', names='Client Type', color='Client Type', color_discrete_map={"Supermarkets": "red", "Discounters": "green", "Grocery": "blue", "Big-box": "goldenrod"},
+                 category_orders={"Client Type": ["Supermarkets", "Discounters", "Grocery", "Big-box"]})
 
 packzero = erpzerothcluster.groupby(['Pack','Client Type'])['Gross Profit'].sum().reset_index()
 fig_packzero = px.bar(packzero,
@@ -61,7 +62,8 @@ sizezero = erpzerothcluster.groupby(['Size','Client Type'])['Gross Profit'].sum(
 fig_sizezero = px.bar(sizezero,
                  x = sizezero['Size'],
                  y = sizezero['Gross Profit'],
-                 color = sizezero['Client Type'],
+                 color = sizezero['Client Type'], color_discrete_map={"Supermarkets": "red", "Discounters": "green", "Grocery": "blue", "Big-box": "goldenrod"},
+                 category_orders={"Client Type": ["Supermarkets", "Discounters", "Grocery", "Big-box"]},
                  barmode='group', title = "<b>How profit looks with respect to size</b>")
 
 fig_sizezero.update_layout(height = 600, width = 1000, template = custom_template, xaxis_title = '<b>Size</b>',
@@ -73,7 +75,8 @@ brandzero = erpzerothcluster.groupby(['Brand','Client Type'])['Gross Profit'].su
 fig_brandzero = px.bar(brandzero,
                  x = brandzero['Brand'],
                  y = brandzero['Gross Profit'],
-                 color = brandzero['Client Type'],
+                 color = brandzero['Client Type'], color_discrete_map={"Supermarkets": "red", "Discounters": "green", "Grocery": "blue", "Big-box": "goldenrod"},
+                 category_orders={"Client Type": ["Supermarkets", "Discounters", "Grocery", "Big-box"]},
                  barmode='group', title = "<b>How profit looks with respect to Brand</b>")
 
 fig_brandzero.update_layout(height = 600, width = 1000, template = custom_template, xaxis_title = '<b>Brand</b>',
@@ -85,7 +88,8 @@ clientzero = erpzerothcluster.groupby(['Client','Client Type'])['Gross Profit'].
 fig_clientzero = px.bar(clientzero,
                  x = clientzero['Client'],
                  y = clientzero['Gross Profit'],
-                 color = clientzero['Client Type'],
+                 color = clientzero['Client Type'], color_discrete_map={"Supermarkets": "red", "Discounters": "green", "Grocery": "blue", "Big-box": "goldenrod"},
+                 category_orders={"Client Type": ["Supermarkets", "Discounters", "Grocery", "Big-box"]},
                  title = "<b>How profit looks with respect to Client</b>")
 
 fig_clientzero.update_layout(height = 600, width = 1000, template = custom_template, xaxis_title = '<b>Client</b>',
@@ -96,13 +100,15 @@ fig_clientzero.update_yaxes(automargin = True, title_standoff = 10)
 # Plotting four charts for erp cluster one
 
 erponecluster = erp[erp['Cluster']==1]
-fig_typeone = px.pie(erponecluster, values='Gross Profit', names='Client Type', color='Client Type')
+fig_typeone = px.pie(erponecluster, values='Gross Profit', names='Client Type', color='Client Type', color_discrete_map={"Supermarkets": "red", "Discounters": "green", "Grocery": "blue", "Big-box": "goldenrod"},
+                 category_orders={"Client Type": ["Supermarkets", "Discounters", "Grocery", "Big-box"]})
 
 packone = erponecluster.groupby(['Pack','Client Type'])['Gross Profit'].sum().reset_index()
 fig_packone = px.bar(packone,
                  x = packone['Pack'],
                  y = packone['Gross Profit'],
-                 color = packone['Client Type'],
+                 color = packone['Client Type'], color_discrete_map={"Supermarkets": "red", "Discounters": "green", "Grocery": "blue", "Big-box": "goldenrod"},
+                 category_orders={"Client Type": ["Supermarkets", "Discounters", "Grocery", "Big-box"]},
                  barmode='group', title = "<b>How profit looks with respect to packs</b>")
 
 fig_packone.update_layout(height = 600, width = 1000, template = custom_template, xaxis_title = '<b>Pack</b>',
@@ -114,7 +120,8 @@ sizeone = erponecluster.groupby(['Size','Client Type'])['Gross Profit'].sum().re
 fig_sizeone = px.bar(sizeone,
                  x = sizeone['Size'],
                  y = sizeone['Gross Profit'],
-                 color = sizeone['Client Type'],
+                 color = sizeone['Client Type'], color_discrete_map={"Supermarkets": "red", "Discounters": "green", "Grocery": "blue", "Big-box": "goldenrod"},
+                 category_orders={"Client Type": ["Supermarkets", "Discounters", "Grocery", "Big-box"]},
                  barmode='group', title = "<b>How profit looks with respect to size</b>")
 
 fig_sizeone.update_layout(height = 600, width = 1000, template = custom_template, xaxis_title = '<b>Size</b>',
@@ -126,7 +133,8 @@ brandone = erponecluster.groupby(['Brand','Client Type'])['Gross Profit'].sum().
 fig_brandone = px.bar(brandone,
                  x = brandone['Brand'],
                  y = brandone['Gross Profit'],
-                 color = brandone['Client Type'],
+                 color = brandone['Client Type'], color_discrete_map={"Supermarkets": "red", "Discounters": "green", "Grocery": "blue", "Big-box": "goldenrod"},
+                 category_orders={"Client Type": ["Supermarkets", "Discounters", "Grocery", "Big-box"]},
                  barmode='group', title = "<b>How profit looks with respect to Brand</b>")
 
 fig_brandone.update_layout(height = 600, width = 1000, template = custom_template, xaxis_title = '<b>Brand</b>',
@@ -138,7 +146,8 @@ clientone = erponecluster.groupby(['Client','Client Type'])['Gross Profit'].sum(
 fig_clientone = px.bar(clientone,
                  x = clientone['Client'],
                  y = clientone['Gross Profit'],
-                 color = clientone['Client Type'],
+                 color = clientone['Client Type'], color_discrete_map={"Supermarkets": "red", "Discounters": "green", "Grocery": "blue", "Big-box": "goldenrod"},
+                 category_orders={"Client Type": ["Supermarkets", "Discounters", "Grocery", "Big-box"]},
                  title = "<b>How profit looks with respect to Client</b>")
 
 fig_clientone.update_layout(height = 600, width = 1000, template = custom_template, xaxis_title = '<b>Client</b>',
@@ -149,13 +158,15 @@ fig_clientone.update_yaxes(automargin = True, title_standoff = 10)
 # Plotting four charts for erp cluster two
 
 erptwocluster = erp[erp['Cluster']==2]
-fig_typetwo = px.pie(erptwocluster, values='Gross Profit', names='Client Type', color='Client Type')
+fig_typetwo = px.pie(erptwocluster, values='Gross Profit', names='Client Type', color='Client Type', color_discrete_map={"Supermarkets": "red", "Discounters": "green", "Grocery": "blue", "Big-box": "goldenrod"},
+                 category_orders={"Client Type": ["Supermarkets", "Discounters", "Grocery", "Big-box"]})
 
 packtwo = erptwocluster.groupby(['Pack','Client Type'])['Gross Profit'].sum().reset_index()
 fig_packtwo = px.bar(packtwo,
                  x = packtwo['Pack'],
                  y = packtwo['Gross Profit'],
-                 color = packtwo['Client Type'],
+                 color = packtwo['Client Type'], color_discrete_map={"Supermarkets": "red", "Discounters": "green", "Grocery": "blue", "Big-box": "goldenrod"},
+                 category_orders={"Client Type": ["Supermarkets", "Discounters", "Grocery", "Big-box"]},
                  barmode='group', title = "<b>How profit looks with respect to packs</b>")
 
 fig_packtwo.update_layout(height = 600, width = 1000, template = custom_template, xaxis_title = '<b>Pack</b>',
@@ -167,7 +178,8 @@ sizetwo = erptwocluster.groupby(['Size','Client Type'])['Gross Profit'].sum().re
 fig_sizetwo = px.bar(sizetwo,
                  x = sizetwo['Size'],
                  y = sizetwo['Gross Profit'],
-                 color = sizetwo['Client Type'],
+                 color = sizetwo['Client Type'], color_discrete_map={"Supermarkets": "red", "Discounters": "green", "Grocery": "blue", "Big-box": "goldenrod"},
+                 category_orders={"Client Type": ["Supermarkets", "Discounters", "Grocery", "Big-box"]},
                  barmode='group', title = "<b>How profit looks with respect to size</b>")
 
 fig_sizetwo.update_layout(height = 600, width = 1000, template = custom_template, xaxis_title = '<b>Size</b>',
@@ -179,7 +191,8 @@ brandtwo = erptwocluster.groupby(['Brand','Client Type'])['Gross Profit'].sum().
 fig_brandtwo = px.bar(brandtwo,
                  x = brandtwo['Brand'],
                  y = brandtwo['Gross Profit'],
-                 color = brandtwo['Client Type'],
+                 color = brandtwo['Client Type'], color_discrete_map={"Supermarkets": "red", "Discounters": "green", "Grocery": "blue", "Big-box": "goldenrod"},
+                 category_orders={"Client Type": ["Supermarkets", "Discounters", "Grocery", "Big-box"]},
                  barmode='group', title = "<b>How profit looks with respect to Brand</b>")
 
 fig_brandtwo.update_layout(height = 600, width = 1000, template = custom_template, xaxis_title = '<b>Brand</b>',
@@ -191,7 +204,8 @@ clienttwo = erptwocluster.groupby(['Client','Client Type'])['Gross Profit'].sum(
 fig_clienttwo = px.bar(clienttwo,
                  x = clienttwo['Client'],
                  y = clienttwo['Gross Profit'],
-                 color = clienttwo['Client Type'],
+                 color = clienttwo['Client Type'], color_discrete_map={"Supermarkets": "red", "Discounters": "green", "Grocery": "blue", "Big-box": "goldenrod"},
+                 category_orders={"Client Type": ["Supermarkets", "Discounters", "Grocery", "Big-box"]},
                  title = "<b>How profit looks with respect to Client</b>")
 
 fig_clienttwo.update_layout(height = 600, width = 1000, template = custom_template, xaxis_title = '<b>Client</b>',
@@ -203,13 +217,15 @@ fig_clienttwo.update_yaxes(automargin = True, title_standoff = 10)
 # Plotting four charts for erp cluster three
 
 erpthreecluster = erp[erp['Cluster']==3]
-fig_typethree = px.pie(erpthreecluster, values='Gross Profit', names='Client Type', color='Client Type')
+fig_typethree = px.pie(erpthreecluster, values='Gross Profit', names='Client Type', color='Client Type', color_discrete_map={"Supermarkets": "red", "Discounters": "green", "Grocery": "blue", "Big-box": "goldenrod"},
+                 category_orders={"Client Type": ["Supermarkets", "Discounters", "Grocery", "Big-box"]})
 
 packthree = erpthreecluster.groupby(['Pack','Client Type'])['Gross Profit'].sum().reset_index()
 fig_packthree = px.bar(packthree,
                  x = packthree['Pack'],
                  y = packthree['Gross Profit'],
-                 color = packthree['Client Type'],
+                 color = packthree['Client Type'], color_discrete_map={"Supermarkets": "red", "Discounters": "green", "Grocery": "blue", "Big-box": "goldenrod"},
+                 category_orders={"Client Type": ["Supermarkets", "Discounters", "Grocery", "Big-box"]},
                  barmode='group', title = "<b>How profit looks with respect to packs</b>")
 
 fig_packthree.update_layout(height = 600, width = 1000, template = custom_template, xaxis_title = '<b>Pack</b>',
@@ -221,7 +237,8 @@ sizethree = erpthreecluster.groupby(['Size','Client Type'])['Gross Profit'].sum(
 fig_sizethree = px.bar(sizethree,
                  x = sizethree['Size'],
                  y = sizethree['Gross Profit'],
-                 color = sizethree['Client Type'],
+                 color = sizethree['Client Type'], color_discrete_map={"Supermarkets": "red", "Discounters": "green", "Grocery": "blue", "Big-box": "goldenrod"},
+                 category_orders={"Client Type": ["Supermarkets", "Discounters", "Grocery", "Big-box"]},
                  barmode='group', title = "<b>How profit looks with respect to size</b>")
 
 fig_sizethree.update_layout(height = 600, width = 1000, template = custom_template, xaxis_title = '<b>Size</b>',
@@ -233,7 +250,8 @@ brandthree = erpthreecluster.groupby(['Brand','Client Type'])['Gross Profit'].su
 fig_brandthree = px.bar(brandthree,
                  x = brandthree['Brand'],
                  y = brandthree['Gross Profit'],
-                 color = brandthree['Client Type'],
+                 color = brandthree['Client Type'], color_discrete_map={"Supermarkets": "red", "Discounters": "green", "Grocery": "blue", "Big-box": "goldenrod"},
+                 category_orders={"Client Type": ["Supermarkets", "Discounters", "Grocery", "Big-box"]},
                  barmode='group', title = "<b>How profit looks with respect to Brand</b>")
 
 fig_brandthree.update_layout(height = 600, width = 1000, template = custom_template, xaxis_title = '<b>Brand</b>',
@@ -245,7 +263,8 @@ clientthree = erpthreecluster.groupby(['Client','Client Type'])['Gross Profit'].
 fig_clientthree = px.bar(clientthree,
                  x = clientthree['Client'],
                  y = clientthree['Gross Profit'],
-                 color = clientthree['Client Type'],
+                 color = clientthree['Client Type'], color_discrete_map={"Supermarkets": "red", "Discounters": "green", "Grocery": "blue", "Big-box": "goldenrod"},
+                 category_orders={"Client Type": ["Supermarkets", "Discounters", "Grocery", "Big-box"]},
                  title = "<b>How profit looks with respect to Client</b>")
 
 fig_clientthree.update_layout(height = 600, width = 1000, template = custom_template, xaxis_title = '<b>Client</b>',
@@ -256,13 +275,15 @@ fig_clientthree.update_yaxes(automargin = True, title_standoff = 10)
 # Plotting four charts for erp cluster four
 
 erpfourcluster = erp[erp['Cluster']==4]
-fig_typefour = px.pie(erpfourcluster, values='Gross Profit', names='Client Type', color='Client Type')
+fig_typefour = px.pie(erpfourcluster, values='Gross Profit', names='Client Type', color='Client Type', color_discrete_map={"Supermarkets": "red", "Discounters": "green", "Grocery": "blue", "Big-box": "goldenrod"},
+                 category_orders={"Client Type": ["Supermarkets", "Discounters", "Grocery", "Big-box"]})
 
 packfour = erpfourcluster.groupby(['Pack','Client Type'])['Gross Profit'].sum().reset_index()
 fig_packfour = px.bar(packfour,
                  x = packfour['Pack'],
                  y = packfour['Gross Profit'],
-                 color = packfour['Client Type'],
+                 color = packfour['Client Type'], color_discrete_map={"Supermarkets": "red", "Discounters": "green", "Grocery": "blue", "Big-box": "goldenrod"},
+                 category_orders={"Client Type": ["Supermarkets", "Discounters", "Grocery", "Big-box"]},
                  barmode='group', title = "<b>How profit looks with respect to packs</b>")
 
 fig_packfour.update_layout(height = 600, width = 1000, template = custom_template, xaxis_title = '<b>Pack</b>',
@@ -274,7 +295,8 @@ sizefour = erpfourcluster.groupby(['Size','Client Type'])['Gross Profit'].sum().
 fig_sizefour = px.bar(sizefour,
                  x = sizefour['Size'],
                  y = sizefour['Gross Profit'],
-                 color = sizefour['Client Type'],
+                 color = sizefour['Client Type'], color_discrete_map={"Supermarkets": "red", "Discounters": "green", "Grocery": "blue", "Big-box": "goldenrod"},
+                 category_orders={"Client Type": ["Supermarkets", "Discounters", "Grocery", "Big-box"]},
                  barmode='group', title = "<b>How profit looks with respect to size</b>")
 
 fig_sizefour.update_layout(height = 600, width = 1000, template = custom_template, xaxis_title = '<b>Size</b>',
@@ -286,7 +308,8 @@ brandfour = erpfourcluster.groupby(['Brand','Client Type'])['Gross Profit'].sum(
 fig_brandfour = px.bar(brandfour,
                  x = brandfour['Brand'],
                  y = brandfour['Gross Profit'],
-                 color = brandfour['Client Type'],
+                 color = brandfour['Client Type'], color_discrete_map={"Supermarkets": "red", "Discounters": "green", "Grocery": "blue", "Big-box": "goldenrod"},
+                 category_orders={"Client Type": ["Supermarkets", "Discounters", "Grocery", "Big-box"]},
                  barmode='group', title = "<b>How profit looks with respect to Brand</b>")
 
 fig_brandfour.update_layout(height = 600, width = 1000, template = custom_template, xaxis_title = '<b>Brand</b>',
@@ -298,7 +321,8 @@ clientfour = erpfourcluster.groupby(['Client','Client Type'])['Gross Profit'].su
 fig_clientfour = px.bar(clientfour,
                  x = clientfour['Client'],
                  y = clientfour['Gross Profit'],
-                 color = clientfour['Client Type'],
+                 color = clientfour['Client Type'], color_discrete_map={"Supermarkets": "red", "Discounters": "green", "Grocery": "blue", "Big-box": "goldenrod"},
+                 category_orders={"Client Type": ["Supermarkets", "Discounters", "Grocery", "Big-box"]},
                  title = "<b>How profit looks with respect to Client</b>")
 
 fig_clientfour.update_layout(height = 600, width = 1000, template = custom_template, xaxis_title = '<b>Client</b>',
