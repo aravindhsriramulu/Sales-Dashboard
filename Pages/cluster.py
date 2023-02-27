@@ -243,7 +243,7 @@ fig_brandthree.update_yaxes(automargin = True, title_standoff = 10)
 clientthree = erpthreecluster.groupby(['Client','Client Type'])['Gross Profit'].sum().reset_index()
 fig_clientthree = px.bar(clientthree,
                  x = clientthree['Client'],
-                 y = eclientthree['Gross Profit'],
+                 y = clientthree['Gross Profit'],
                  color = clientthree['Client Type'],
                  title = "<b>How profit looks with respect to Client</b>")
 
