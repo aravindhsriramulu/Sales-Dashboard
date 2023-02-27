@@ -46,7 +46,7 @@ fig_typezero = px.pie(erpzerothcluster, values='Gross Profit', names='Client Typ
 
 fig_packzero = px.bar(erpzerothcluster,
                  x = erpzerothcluster['Pack'],
-                 y = erpzerothcluster['Gross Profit'],
+                 y = erpzerothcluster.groupby('Gross Profit')['Pack'].sum(),
                  color = erpzerothcluster['Client Type'],
                  barmode='group', title = "<b>How profit looks with respect to packs</b>")
 
