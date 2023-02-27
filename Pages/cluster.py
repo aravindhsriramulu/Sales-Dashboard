@@ -298,7 +298,7 @@ with tab1:
     
     st.header('Pack vs Profit Distribution')
     st.plotly_chart(fig_packzero)
-    st.write("4X and 15X achieve a gross profit of over $200K. Contrastingly, 6X and 20X attain the lowest profit figure of \$60K")
+    st.write("4X and 15X achieve a gross profit of over \$200K. Contrastingly, 6X and 20X attain the lowest profit figure of \$60K")
 
     st.header('Size vs Profit Distribution')
     st.plotly_chart(fig_sizezero)
