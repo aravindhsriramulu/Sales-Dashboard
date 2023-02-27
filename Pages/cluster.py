@@ -281,7 +281,7 @@ fig_sizefour.update_layout(height = 600, width = 1000, template = custom_templat
 
 fig_sizefour.update_yaxes(automargin = True, title_standoff = 10)
 
-brandfour = brandfour.groupby(['Brand','Client Type'])['Gross Profit'].sum().reset_index()
+brandfour = erpfourcluster.groupby(['Brand','Client Type'])['Gross Profit'].sum().reset_index()
 fig_brandfour = px.bar(brandfour,
                  x = brandfour['Brand'],
                  y = brandfour['Gross Profit'],
@@ -293,7 +293,7 @@ fig_brandfour.update_layout(height = 600, width = 1000, template = custom_templa
 
 fig_brandfour.update_yaxes(automargin = True, title_standoff = 10)
 
-clientfour = clientfour.groupby(['Client','Client Type'])['Gross Profit'].sum().reset_index()
+clientfour = erpfourcluster.groupby(['Client','Client Type'])['Gross Profit'].sum().reset_index()
 fig_clientfour = px.bar(clientfour,
                  x = clientfour['Client'],
                  y = clientfour['Gross Profit'],
