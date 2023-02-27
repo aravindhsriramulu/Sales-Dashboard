@@ -302,7 +302,7 @@ with tab1:
 
     st.header('Size vs Profit Distribution')
     st.plotly_chart(fig_sizezero)
-    st.text("500ML is the ideal range for sale in this segment. It has recorded a gross profit if above $400K. Other sizes manage to cross the threshold of $100K gross profit except for the 750ML size which records the lowest gross profit of $10K")
+    st.write("500ML is the ideal range for sale in this segment. It has recorded a gross profit if above \$400K. Other sizes manage to cross the threshold of \$100K gross profit except for the 750ML size which records the lowest gross profit of \$10K")
     
     st.header('Brand vs Profit Distribution')
     st.plotly_chart(fig_brandzero)
