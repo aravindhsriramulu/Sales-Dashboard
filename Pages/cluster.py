@@ -81,7 +81,7 @@ fig_clientzero = px.bar(erpzerothcluster,
                  x = erpzerothcluster['Client'],
                  y = erpzerothcluster['Gross Profit'],
                  color = erpzerothcluster['Client Type'],
-                 barmode='group', title = "<b>How profit looks with respect to Client</b>")
+                 title = "<b>How profit looks with respect to Client</b>")
 
 fig_clientzero.update_layout(height = 600, width = 1000, template = custom_template, xaxis_title = '<b>Client</b>',
                       yaxis_title = '<b>Gross Profit</b>')
@@ -130,7 +130,7 @@ fig_clientone = px.bar(erponecluster,
                  x = erponecluster['Client'],
                  y = erponecluster['Gross Profit'],
                  color = erponecluster['Client Type'],
-                 barmode='group', title = "<b>How profit looks with respect to Client</b>")
+                 title = "<b>How profit looks with respect to Client</b>")
 
 fig_clientone.update_layout(height = 600, width = 1000, template = custom_template, xaxis_title = '<b>Client</b>',
                       yaxis_title = '<b>Gross Profit</b>')
@@ -179,7 +179,7 @@ fig_clienttwo = px.bar(erptwocluster,
                  x = erptwocluster['Client'],
                  y = erptwocluster['Gross Profit'],
                  color = erptwocluster['Client Type'],
-                 barmode='group', title = "<b>How profit looks with respect to Client</b>")
+                 title = "<b>How profit looks with respect to Client</b>")
 
 fig_clienttwo.update_layout(height = 600, width = 1000, template = custom_template, xaxis_title = '<b>Client</b>',
                       yaxis_title = '<b>Gross Profit</b>')
@@ -229,7 +229,7 @@ fig_clientthree = px.bar(erpthreecluster,
                  x = erpthreecluster['Client'],
                  y = erpthreecluster['Gross Profit'],
                  color = erpthreecluster['Client Type'],
-                 barmode='group', title = "<b>How profit looks with respect to Client</b>")
+                 title = "<b>How profit looks with respect to Client</b>")
 
 fig_clientthree.update_layout(height = 600, width = 1000, template = custom_template, xaxis_title = '<b>Client</b>',
                       yaxis_title = '<b>Gross Profit</b>')
@@ -278,7 +278,7 @@ fig_clientfour = px.bar(erpfourcluster,
                  x = erpfourcluster['Client'],
                  y = erpfourcluster['Gross Profit'],
                  color = erpfourcluster['Client Type'],
-                 barmode='group', title = "<b>How profit looks with respect to Client</b>")
+                 title = "<b>How profit looks with respect to Client</b>")
 
 fig_clientfour.update_layout(height = 600, width = 1000, template = custom_template, xaxis_title = '<b>Client</b>',
                       yaxis_title = '<b>Gross Profit</b>')
