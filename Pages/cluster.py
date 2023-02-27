@@ -294,7 +294,7 @@ tab1, tab2, tab3, tab4, tab5 = st.tabs(['**Segment Zero**', '**Segment One**', '
 with tab1:
     st.header('Client Type Distribution')
     st.plotly_chart(fig_typezero)
-    st.text("Supermarkets leads the chart with highest profit of $700K while Discounters, Grocery and Big-box have $350K, $200k and $142K")
+    st.write("Supermarkets leads the chart with highest profit of \$700K while Discounters, Grocery and Big-box have \$350K, \$200k and \$142K")
     
     st.header('Pack vs Profit Distribution')
     st.plotly_chart(fig_packzero)
