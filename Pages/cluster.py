@@ -97,6 +97,8 @@ fig_clientzero.update_layout(height = 600, width = 1000, template = custom_templ
 
 fig_clientzero.update_yaxes(automargin = True, title_standoff = 10)
 
+figreczero = px.sunburst(erpzerothcluster, path=['Size', 'Pack'], values='Gross Profit')
+
 # Plotting four charts for erp cluster one
 
 erponecluster = erp[erp['Cluster']==1]
@@ -154,6 +156,8 @@ fig_clientone.update_layout(height = 600, width = 1000, template = custom_templa
                       yaxis_title = '<b>Gross Profit</b>')
 
 fig_clientone.update_yaxes(automargin = True, title_standoff = 10)
+
+figrecone = px.sunburst(erponecluster, path=['Size', 'Pack'], values='Gross Profit')
 
 # Plotting four charts for erp cluster two
 
@@ -213,6 +217,7 @@ fig_clienttwo.update_layout(height = 600, width = 1000, template = custom_templa
 
 fig_clienttwo.update_yaxes(automargin = True, title_standoff = 10)
 
+figrectwo = px.sunburst(erptwocluster, path=['Size', 'Pack'], values='Gross Profit')
 
 # Plotting four charts for erp cluster three
 
@@ -272,6 +277,8 @@ fig_clientthree.update_layout(height = 600, width = 1000, template = custom_temp
 
 fig_clientthree.update_yaxes(automargin = True, title_standoff = 10)
 
+figrecthree = px.sunburst(erpthreecluster, path=['Size', 'Pack'], values='Gross Profit')
+
 # Plotting four charts for erp cluster four
 
 erpfourcluster = erp[erp['Cluster']==4]
@@ -330,11 +337,12 @@ fig_clientfour.update_layout(height = 600, width = 1000, template = custom_templ
 
 fig_clientfour.update_yaxes(automargin = True, title_standoff = 10)
 
+figrecfour = px.sunburst(erpfourcluster, path=['Size', 'Pack'], values='Gross Profit')
 
 # Creating the streamlit layout
 
-tab1, tab2, tab3, tab4, tab5 = st.tabs(['**Segment Zero**', '**Segment One**', '**Segment Two**', '**Segment Three**',
-                                        '**Segment Four**'])
+tab1, tab2, tab3, tab4, tab5, tab6 = st.tabs(['**Segment Zero**', '**Segment One**', '**Segment Two**', '**Segment Three**',
+                                        '**Segment Four**', '**Recomendations**'])
 
 with tab1:
     st.header('Client Type Distribution')
@@ -440,4 +448,25 @@ with tab5:
     st.header('Client vs Profit Distribution')
     st.plotly_chart(fig_clientfour)
     st.write("Super Target and Trader's Joe continue to dominate the market with a gross profit of over \$2.5M independently")
+
+with tab6:
+    st.header('Segment Zero Recommendations')
+    st.plotly_chart(fig_reczero)
+    st.write("Supermarkets have a lot of scope for profit in this segment but Publix and WinCo Foods show the lowest. These clients can increase their focus on shelf life for 500ML size and 15X/4X packs for better profitability. Trader's Joe is the only Grocery client in this segment. Optimizing shelf life for 750ML/600ML in 2X/4X/6X/8X can result in better profitability. Big-box sam's club can focus more on selling 500ML size in 15X and 4X packs for getting a considerable profit margin.")
+    
+    st.header('Segment One Recommendations')
+    st.plotly_chart(fig_recone)
+    st.write("Buratino, Buratino Orange, Buratino Peach and Crocky see the lowest profit turnover. 1.25L and 250ML sizes are the least sold. Dundy and its subsidiaries see the most profitability. Decreasing shelf life for Evan can also increase in profitability for safeway and Walmart - discounters. Discounters can decrease shelf life for 18X and 20X pack.")
+
+    st.header('Segment Two Recommendations')
+    st.plotly_chart(fig_rectwo)
+    st.write("Unlike other Big-box, Costco has a strong sales record and it can climb higher in profits by eliminating brands like Pitbull (its subsidiaries) and Zumba (its subsidiaries).Albertsons, HEB and Kroger have strong dominance in selling the brand EVAN. Thus, it can experiment different sizes/packs for profit. Kmart Super Center has increased profitability by eliminating size ranges 1.25L, 2L and 750ML.")
+    
+    st.header('Segment Three Recommendations')
+    st.plotly_chart(fig_recthree)
+    st.write("Sam's club should replicate or revise its marketing or shelf strategy like Costco for seeing more sales. 18X and 20X packs are not exhibited in Big-box clients. They can experiment for seeing profit.Big-box clients can continue increasing shelf-life for 4X and 15X packs.")
+    
+    st.header('Segment Four Recommendations')
+    st.plotly_chart(fig_recfour)
+    st.write("Supermarkets can eliminate 1.25L for more profitability. Discounters like Super Target can eliminate products with sizes 18X and 20X. Sam's Club can revise shelf strategy for 15X and 20X packs.")
 
