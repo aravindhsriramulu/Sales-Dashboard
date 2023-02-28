@@ -3,7 +3,7 @@ import streamlit as st
 import plotly.express as px
 from numerize.numerize import numerize
 
-st.set_page_config(page_title = 'Water Bottles Sales Dashboard',
+st.set_page_config(page_title = 'Sales Dashboard',
                     layout='wide',
                     initial_sidebar_state='collapsed')
 
