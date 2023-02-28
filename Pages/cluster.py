@@ -97,7 +97,7 @@ fig_clientzero.update_layout(height = 600, width = 1000, template = custom_templ
 
 fig_clientzero.update_yaxes(automargin = True, title_standoff = 10)
 
-figreczero = px.sunburst(erpzerothcluster, path=['Client', 'Brand', 'Size', 'Pack'], values='Gross Profit')
+figreczero = px.sunburst(erpzerothcluster, path=['Brand', 'Size', 'Pack'], values='Gross Profit')
 
 # Plotting four charts for erp cluster one
 
@@ -157,7 +157,7 @@ fig_clientone.update_layout(height = 600, width = 1000, template = custom_templa
 
 fig_clientone.update_yaxes(automargin = True, title_standoff = 10)
 
-figrecone = px.sunburst(erponecluster, path=['Client', 'Brand', 'Size', 'Pack'], values='Gross Profit')
+figrecone = px.sunburst(erponecluster, path=['Brand', 'Size', 'Pack'], values='Gross Profit')
 
 # Plotting four charts for erp cluster two
 
@@ -217,7 +217,7 @@ fig_clienttwo.update_layout(height = 600, width = 1000, template = custom_templa
 
 fig_clienttwo.update_yaxes(automargin = True, title_standoff = 10)
 
-figrectwo = px.sunburst(erptwocluster, path=['Client', 'Brand', 'Size', 'Pack'], values='Gross Profit')
+figrectwo = px.sunburst(erptwocluster, path=['Brand', 'Size', 'Pack'], values='Gross Profit')
 
 # Plotting four charts for erp cluster three
 
@@ -277,7 +277,7 @@ fig_clientthree.update_layout(height = 600, width = 1000, template = custom_temp
 
 fig_clientthree.update_yaxes(automargin = True, title_standoff = 10)
 
-figrecthree = px.sunburst(erpthreecluster, path=['Client', 'Brand', 'Size', 'Pack'], values='Gross Profit')
+figrecthree = px.sunburst(erpthreecluster, path=['Brand', 'Size', 'Pack'], values='Gross Profit')
 
 # Plotting four charts for erp cluster four
 
@@ -337,7 +337,7 @@ fig_clientfour.update_layout(height = 600, width = 1000, template = custom_templ
 
 fig_clientfour.update_yaxes(automargin = True, title_standoff = 10)
 
-figrecfour = px.sunburst(erpfourcluster, path=['Client', 'Brand', 'Size', 'Pack'], values='Gross Profit')
+figrecfour = px.sunburst(erpfourcluster, path=['Brand', 'Size', 'Pack'], values='Gross Profit')
 
 # Creating the streamlit layout
 
