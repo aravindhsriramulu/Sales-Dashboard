@@ -451,22 +451,22 @@ with tab5:
 
 with tab6:
     st.header('Segment Zero Recommendations')
-    st.plotly_chart(fig_reczero)
+    st.plotly_chart(figreczero)
     st.write("Supermarkets have a lot of scope for profit in this segment but Publix and WinCo Foods show the lowest. These clients can increase their focus on shelf life for 500ML size and 15X/4X packs for better profitability. Trader's Joe is the only Grocery client in this segment. Optimizing shelf life for 750ML/600ML in 2X/4X/6X/8X can result in better profitability. Big-box sam's club can focus more on selling 500ML size in 15X and 4X packs for getting a considerable profit margin.")
     
     st.header('Segment One Recommendations')
-    st.plotly_chart(fig_recone)
+    st.plotly_chart(figrecone)
     st.write("Buratino, Buratino Orange, Buratino Peach and Crocky see the lowest profit turnover. 1.25L and 250ML sizes are the least sold. Dundy and its subsidiaries see the most profitability. Decreasing shelf life for Evan can also increase in profitability for safeway and Walmart - discounters. Discounters can decrease shelf life for 18X and 20X pack.")
 
     st.header('Segment Two Recommendations')
-    st.plotly_chart(fig_rectwo)
+    st.plotly_chart(figrectwo)
     st.write("Unlike other Big-box, Costco has a strong sales record and it can climb higher in profits by eliminating brands like Pitbull (its subsidiaries) and Zumba (its subsidiaries).Albertsons, HEB and Kroger have strong dominance in selling the brand EVAN. Thus, it can experiment different sizes/packs for profit. Kmart Super Center has increased profitability by eliminating size ranges 1.25L, 2L and 750ML.")
     
     st.header('Segment Three Recommendations')
-    st.plotly_chart(fig_recthree)
+    st.plotly_chart(figrecthree)
     st.write("Sam's club should replicate or revise its marketing or shelf strategy like Costco for seeing more sales. 18X and 20X packs are not exhibited in Big-box clients. They can experiment for seeing profit.Big-box clients can continue increasing shelf-life for 4X and 15X packs.")
     
     st.header('Segment Four Recommendations')
-    st.plotly_chart(fig_recfour)
+    st.plotly_chart(figrecfour)
     st.write("Supermarkets can eliminate 1.25L for more profitability. Discounters like Super Target can eliminate products with sizes 18X and 20X. Sam's Club can revise shelf strategy for 15X and 20X packs.")
 
